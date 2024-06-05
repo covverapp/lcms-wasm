@@ -35,8 +35,8 @@ async function ColorProfiles(lcms) {
     return lcms.cmsGetProfileInfoASCII(profile, cmsInfoDescription, "en", "US");
   }
 
-  const profile_sRGB = await loadProfile("test/sRGB IEC61966-2.1.icc");
-  const profile_CMYK = await loadProfile("test/U.S. Web Coated (SWOP) v2.icc");
+  const profile_sRGB = await loadProfile("test/sRGB2014.icc");
+  const profile_CMYK = await loadProfile("test/PSOcoated_v3.icc");
 
   const profiles = [profile_sRGB, profile_CMYK];
   profiles.forEach((c) =>
